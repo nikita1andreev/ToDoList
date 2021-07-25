@@ -1,0 +1,33 @@
+# Set the java args to high
+
+-Xmx14512M
+
+-XX:MaxPermSize=256m
+
+-XX:ReservedCodeCacheSize=128m
+
+#-Dcom.sun.management.jmxremote
+#-Dcom.sun.management.jmxremote.ssl=false
+#-Dcom.sun.management.jmxremote.authenticate=false
+#-Dcom.sun.management.jmxremote.port=1099
+
+# Set the extra SBT options
+
+-Dsbt.log.format=true
+#-Dprism.order=sw
+#-Dprism.order=j2d
+-Dprism.maxvram=9000M
+#-Dprism.poolstats=true
+
+-Dprism.verbose=true
+-Dcom.sun.javafx.experimental.embedded.3d=true
+-Dprism.glDepthSize=24
+
+
+#-Dsun.java2d.opengl=true
+#-Dprism.vsync=false
+#-Dprism.forceGPU=true
+#-Djvm-debug 5005
+#-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
+
+--module-path C://javafx-sdk-11.0.2//lib --add-modules=javafx.controls,javafx.swing,javafx.fxml,javafx.base,javafx.graphics --add-exports javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED
